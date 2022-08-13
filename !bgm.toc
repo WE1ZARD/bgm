@@ -1,0 +1,7 @@
+## Interface: 11200
+
+## Title: |cff134997!|cff2bafffbgm|r
+## Notes: 在我的BGM没人能打败我
+## Author: Weizard (recode from "Fiurs-Hearth-BattleMusic")
+
+bgm.lua
