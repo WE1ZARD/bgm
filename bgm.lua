@@ -33,12 +33,12 @@ local function trigger()
         t:SetScript("OnUpdate",function()
             timetick = timetick+arg1
             if timetick > 0.1 then
+                t:SetScript("OnUpdate",nil)
                 SetCVar("MusicVolume",0.5)
                 SoundOptionsFrame_Load()
-                t:SetScript("OnUpdate",nil)
+               PlayMusic("Interface\\AddOns\\!bgm\\music\\"..tostring(math.random(1,bgm.songs))..".mp3") 
             end 
         end)
-        PlayMusic("Interface\\AddOns\\!bgm\\music\\"..tostring(math.random(1,bgm.songs))..".mp3")
         inCombat = true
     elseif event == "PLAYER_REGEN_ENABLED" then
         inCombat = false
@@ -46,9 +46,9 @@ local function trigger()
         t:SetScript("OnUpdate",function()
             timetick = timetick+arg1
             if timetick > 3.5 then
+                t:SetScript("OnUpdate",nil)
                 SetCVar("MusicVolume",0)
                 SoundOptionsFrame_Load()
-                t:SetScript("OnUpdate",nil)
             end 
         end)
     else
